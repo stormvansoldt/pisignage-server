@@ -1,0 +1,38 @@
+:root {
+  --main-bg: #10141c;
+	--main-fg: #bfbdb6;
+	--navbar-bg: #242936;
+	--navbar-fg: #f0f6fc;
+	--nav-fg-hover: #ffffffb3;
+}
+
+body {
+	color: var(--main-fg);
+	background-color: var(--main-bg);
+}
+
+.text-muted { color: var(--nav-fg-hover) };
+
+.navbar { border: none;}
+
+.navbar-default {
+	color: var(--navbar-fg);
+	background-color: var(--navbar-bg);
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: var(--navbar-fg);
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: var(--nav-fg-hover);
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background-color: var(--main-bg);
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color: var(--main-bg);
+	color: var(--nav-fg-hover);
+}
