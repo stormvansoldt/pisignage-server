@@ -11,14 +11,34 @@ body {
 	background-color: var(--main-bg);
 }
 
+.ng-scope body#serverapp { padding-top: 100px; }
+
 .text-muted { color: var(--nav-fg-hover) };
 
-.navbar { border: none;}
+.navbar { border: none; }
+
+.navbar-fixed-top {
+	border-bottom-width: 2px;
+	margin-bottom: 10px;
+	height: 50px;
+}
 
 .navbar-default {
 	color: var(--navbar-fg);
 	background-color: var(--navbar-bg);
+	font-weight: bold;
 }
+
+.navbar-nav {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+ul.nav:nth-child(3) > li:nth-child(1) > a:nth-child(1) {
+ padding-top: 5px;
+ font-weight: normal;
+}
+
 
 .navbar-default .navbar-nav > li > a {
 	color: var(--navbar-fg);
