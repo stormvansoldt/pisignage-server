@@ -1,3 +1,167 @@
+:root {
+    --main-bg: #10141c;
+      --main-fg: #bfbdb6;
+      --navbar-bg: #242936;
+      --navbar-fg: #f0f6fc;
+      --nav-fg-hover: #ffffffb3;
+  
+    /*used for background and area coloring*/
+    --nord0: #2e3440;
+  
+    /*used for elevated, more prominent or focused UI elements like panels, floating popups*/
+    --nord1: #3b4252;
+  
+    /*For dark ambiance designs, it is used to colorize the currently active text edi
+    tor line as well as selection- and text highlighting color.*/
+    --nord2: #434c5e;
+  
+    /*In the UI scope used as pseudoclass color for disabled elements.
+    For dark ambiance designs, it is used for UI elements like indent- and wrap guide marker.*/
+    --nord3: #4c566a;
+  
+    /*In the UI scope used as semi-light background depending on the theme shading design.*/
+    --nord4: #d8dee9;
+  
+    /*Used as semi-light background depending on the theme shading design.*/
+    --nord5: #e5e9f0;
+  
+    /*In the UI scope used as background, selection- and highlight color depending on the theme shading design.*/
+    --nord6: #eceff4;
+  
+    /*
+    Used for UI elements that should, next to the primary accent color nord8, 
+    stand out and get more visual attention.
+    */
+    --nord7: #8fbcbb;
+  
+    /*
+    Used for primary UI elements with main usage purposes that require the most visual attention.
+    */
+    --nord8: #88c0d0;
+  
+    /*
+    Used for secondary UI elements that also require more visual attention than other elements.
+    */
+    --nord9: #81a1c1;
+  
+    /*
+    Used for tertiary UI elements that require more visual attention than default elements.
+    */
+    --nord10: #5e81ac;
+  
+    /*
+    Red
+    */
+    --nord11: #bf616a;
+  
+    /*
+    Orange
+    */
+    --nord12: #d08770;
+  
+    /*
+    Yellow?
+    */
+    --nord13: #ebcb8b;
+  
+    /*
+    Green
+    */
+    --nord14: #a3be8c;
+  
+    /*
+    Purple
+    */
+    --nord15: #b48ead;
+}
+  
+  html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: var(--main-fg);
+    background-color: var(--main-bg);
+  }
+  
+  @media print {
+    *,
+    :after,
+    :before {
+        color: #000 !important;
+        text-shadow: none !important;
+        background: 0 0 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+    blockquote,
+    pre {
+        border: 1px solid var(--nord6);
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    img,
+    tr {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    h2,
+    h3,
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    select {
+        background: var(--nord1) !important;
+    }
+    .navbar {
+        display: none;
+    }
+    .btn > .caret,
+    .dropup > .btn > .caret {
+        border-top-color: #000 !important;
+    }
+    .label {
+        border: 1px solid #000;
+    }
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table td,
+    .table th {
+        background-color: var(--nord1) !important;
+    }
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid var(--nord1) !important;
+    }
+  }
+
 html {
     height:100%;
 }
@@ -7,11 +171,35 @@ body {
     margin: auto;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     height:100%;
-    padding-top:70px;
+    padding-top:80px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .height100 {
     height: 100%;
+    margin-top: 80px;
 }
 
 .overflow-hidden {
@@ -26,11 +214,11 @@ body {
 .letter-box {
     width: 64px;
     height: 64px;
-    background: lightskyblue;
+    background: var(--nord10);
     text-align: center;
     font-size: 32px;
     line-height: 64px;
-    color: #f8f8ff;
+    color: var(--nord15);
     text-decoration: none !important;
 }
 
@@ -48,7 +236,7 @@ body {
 }
 
 .subtle-text {
-    color: #b8b8b8 !important;
+    color: var(--nord4) !important;
 }
 
 .categories {
@@ -62,15 +250,49 @@ body {
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background-color:#111;
-    color:#fff;
+    background-color:var(--nord10);
+    color:var(--nord10);
     padding:30px;
 }
 .dim {
     opacity: 0.5;
 }
 
+.panel {
+    margin-bottom:20px;
+    background-color: var(--navbar-bg);
+    border:1px solid transparent;
+    border-radius:4px;
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+    box-shadow:0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-body {
+    padding:15px;
+}
+
+.panel-heading {
+    padding:10px 15px;
+    border-bottom:1px solid transparent;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+
+.panel-info > .panel-heading {
+	color: var(--navbar-fg);
+	background-color: var(--nord10);
+	border-color: var(--nord7);
+}
+
 .modal-content > .panel {
+    margin-bottom: 0px;
+
+}
+
+.navbar-default {
+    color: var(--navbar-fg);
+	background-color: #0b1018;
+	border-color: var(--nord10);
     margin-bottom: 0px;
 }
 
